@@ -1,0 +1,16 @@
+body{overflow-x: scroll;overflow-y: hidden;background: #f0eff4;}
+.l-row{padding: 20px 0 50px 50px;}
+.l-col{padding: 0 30px;border-right: 1px solid #b0a7d3;}
+.l-img{border:1px solid #fff; width:320px;height:568px; background: url(./images/0.jpg) no-repeat;background-size: 100% 100%;}
+.l-xs{padding: 0 30px;}
+.l-font{font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,"Helvetica Neue",Arial,sans-serif;}
+.l-img-row{font-size:10px;font-weight:600}
+.l-grid{line-height: 1.7}
+.l-md{text-align: center;}
+.l-operator{margin-left: 22px;}
+.l-title{font-size:16px;font-weight:600;margin-left:30px;line-height:2.4}
+.l-top{margin: 0 12px;font-size: 12px;color: #a2a2a6;margin-top: 32px}
+.l-bottom{margin: 0 12px;font-size: 12px;color: #a2a2a6;margin-top: 80px}
+.l-banner{line-height: 6;margin-left:10px;}
+.l-logo{width:30px;border-radius: 8px;border: 1px solid #e3e2e5;}
+.l-app-title{margin-left: 8px;font-weight: 500;	}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+	<title>DEMO</title>
+	<link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="layui-row l-row">
+	    <div class="layui-col-xs6 l-col">
+	      <div class="grid-demo grid-demo-bg1">
+	      	<form class="layui-form" action="">
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">运营商</label>
+			    <div class="layui-input-inline">
+			      <select name="operator" lay-filter="operator">
+			        <option value="中国移动" selected="">中国移动</option>
+			        <option value="中国电信">中国电信</option>
+			        <option value="中国联通">中国联通</option>
+			      </select>
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">时间</label>
+			    <div class="layui-input-inline">
+			      <input type="text" name="time" id="time" lay-verify="required" lay-reqtext="不可为空" value="上午9:00" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <label class="layui-form-label">标题</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="title" value="开发者" id="title" lay-verify="required" lay-reqtext="标题不可为空" placeholder="请输入" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			  <div class="layui-form-item layui-form-text">
+			    <label class="layui-form-label">上方简介</label>
+			    <div class="layui-input-block">
+			      <textarea lay-reqtext="上方简介不可为空" id="top" placeholder="上方简介" class="layui-textarea" name="top">
+来自开发者“iPhone Distribution:XX”的应用在此iPhone已受信任，在删除开发者全部应用之前始终信任此开发者。</textarea>
+			    </div>
+			  </div>
+			  <div class="layui-form-item layui-form-text">
+			    <label class="layui-form-label">下方简介</label>
+			    <div class="layui-input-block">
+			      <textarea lay-reqtext="下方简介不可为空" id="bottom" placeholder="下方简介" class="layui-textarea" name="bottom">来自开发者“IPHONE DISTRIBUTION: XX”的应用。</textarea>
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <div class="layui-inline">
+			      <label class="layui-form-label">APP标题</label>
+			      <div class="layui-input-inline">
+			        <input type="text" name="apptitle" id="apptitle" lay-verify="required" value="应用名" autocomplete="off" class="layui-input">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <div class="layui-inline">
+			      <label class="layui-form-label">上传图片</label>
+			      <div class="layui-input-inline">
+			        <button type="button" class="layui-btn layui-btn-danger" id="test"><i class="layui-icon"></i>上传图片</button>
+					<div class="layui-inline layui-word-aux">
+					  这里以限制 60KB 为例
+					</div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="layui-form-item">
+			    <div class="layui-input-block">
+			      <button class="layui-btn" lay-submit="" lay-filter="demo1">生成图片</button>
+			      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	    </div>
+	    <div class="layui-col-xs6 l-xs">
+	      <div class="grid-demo l-img l-font">
+	      	<div class="layui-row l-img-row">
+			    <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+			      <div class="grid-demo l-operator l-grid" id="operator">中国移动</div>
+			    </div>
+			    <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+			      <div class="grid-demo l-md l-grid" id="time-show">上午9:00</div>
+			    </div>
+			    <div class="layui-col-xs4 layui-col-sm12 layui-col-md4">
+			    </div>
+			</div>
+			<div class="layui-row">
+			    <div class="layui-col-xs6 layui-col-md12">
+			      <div class="grid-demo l-title l-font" id="title-show">开发者</div>
+			    </div>
+			</div>
+			<div class="layui-row">
+			    <div class="layui-col-xs6 layui-col-md12">
+			      <div class="grid-demo l-top l-font" id="top-show">
+			      	来自开发者“iPhone Distribution: XX”的应用在此iPhone已受信任，在删除开发者全部应用之前始终信任此开发者。
+			      </div>
+			    </div>
+			</div>
+			<div class="layui-row">
+			    <div class="layui-col-xs6 layui-col-md12">
+			      <div class="grid-demo l-bottom l-font" id="bottom-show">
+			      	来自开发者“IPHONE DISTRIBUTION: XX”的应用。</div>
+			    </div>
+			</div>
+			<div class="layui-row">
+			    <div class="layui-col-xs6 layui-col-md12">
+			      <div class="grid-demo l-banner l-font">
+			      		<img src="https://www.baidu.com/favicon.ico" alt="" class="l-logo" id="logo">
+			      		<span class="l-app-title" id="apptitle-show">应用名</span>
+			      </div>
+			    </div>
+			</div>
+	      </div>
+	    </div>
+	</div>
+</div>
+<script src="./layui/layui.js"></script>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	localStorage.removeItem('src');
+  $("#time").on("input",function(e){
+    $('#time-show').html(e.delegateTarget.value);
+  });
+  $("#title").on("input",function(e){
+    $('#title-show').html(e.delegateTarget.value);
+  });
+  $("#top").on("input",function(e){
+    $('#top-show').html(e.delegateTarget.value);
+  });
+  $("#bottom").on("input",function(e){
+    $('#bottom-show').html(e.delegateTarget.value);
+  });
+  $("#apptitle").on("input",function(e){
+    $('#apptitle-show').html(e.delegateTarget.value);
+  });
+});
+layui.use(['form', 'layedit', 'upload'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,upload = layui.upload
+ 
+  //自定义验证规则
+  form.verify({
+    title: function(value){
+      if(value.length < 5){
+        return '标题至少得5个字符啊';
+      }
+    }
+    ,pass: [
+      /^[\S]{6,12}$/
+      ,'密码必须6到12位，且不能出现空格'
+    ]
+    ,content: function(value){
+      layedit.sync(editIndex);
+    }
+  });
+  form.on('select(operator)', function(data){
+  	$('#operator').html(data.value)
+  })
+  //监听提交
+  form.on('submit(demo1)', function(data){
+  	data.field.file = localStorage.getItem('src');
+  	if (!data.field.file) {
+  		layer.msg("上传LOGO",{'icon':2})
+		return false;
+  	};
+  	$.post('/post.php',data.field,function(data){
+  		data = JSON.parse(data);
+  		if (data.msg == 'success') {
+  			layer.open({
+			  type: 1,
+			  title: false,
+			  closeBtn: 0,
+			  area: '450px',
+			  offset: 't',
+			  skin: 'layui-layer-nobg', //没有背景色
+			  shadeClose: true,
+			  content: '<img src="'+ data.src +'" alt="" style="width:450px;height:100%">'
+			});
+  		}
+  	});
+    return false;
+  });
+  
+  var uploadInst = upload.render({
+    elem: '#test' //绑定元素
+    ,url: '/upload.php' //上传接口
+    ,done: function(res){
+    	localStorage.setItem('src',res.data.src);
+    	$("#logo").attr('src',res.data.src)
+    }
+  });
+});
+</script>
+</body>
+</html>
